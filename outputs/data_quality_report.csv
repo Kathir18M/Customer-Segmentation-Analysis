@@ -1,0 +1,16 @@
+Investigation Item,Count / Value,Percentage (%),Description
+Total Original Records,541909,100.0,Total raw transaction rows
+Total Columns,8,-,Original column count
+Exact Duplicate Rows,5268,0.9721,Identical row duplicates
+Duplicate Invoice Numbers,516009,95.2206,Multi-item invoice entries
+Missing CustomerID,135080,24.9267,Guest / anonymous transactions
+Missing Description,1454,0.2683,Items without product description
+Cancellation Invoices ('C'),9288,1.7139,Cancelled or refunded orders
+Negative Quantity,10624,1.9605,Returns and stock adjustments
+Zero Quantity,0,0.0,Orders with zero units
+Negative UnitPrice,2,0.0004,"Accounting debt adjustments (e.g., bad debt)"
+Zero UnitPrice,2515,0.4641,Promotional or free sample items
+Invalid Transaction Dates,0,0.0,Unparseable timestamp values
+Unique Customer IDs,4372,-,Unique registered customers in raw data
+Unique Invoices,25900,-,Unique invoice numbers in raw data
+Unique Countries,38,-,Distinct geographical markets

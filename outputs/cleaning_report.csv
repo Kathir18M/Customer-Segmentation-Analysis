@@ -1,0 +1,7 @@
+Cleaning Operation,Records Before,Records After,Records Removed,Reason for Exclusion
+Remove exact duplicates,541909,536641,5268,Redundant repeated transactions recorded identically
+Remove missing CustomerID,536641,401604,135037,Cannot attribute purchases to individual customers for RFM analysis
+Remove cancellation invoices,401604,392732,8872,Cancelled orders (invoices starting with 'C') excluded from positive purchase RFM
+Remove non-positive quantities,392732,392732,0,Non-positive purchase volumes represent returns or adjustments
+Remove non-positive unit prices,392732,392692,40,"Free items, damaged goods, or accounting write-offs"
+Remove invalid transaction dates,392692,392692,0,Timestamps that could not be parsed to valid datetime

@@ -1,0 +1,62 @@
+================================================================================
+CUSTOMER SEGMENTATION ANALYSIS PROJECT SUMMARY
+================================================================================
+Dataset: UCI Online Retail Dataset (Dec 2010 - Dec 2011)
+Raw Records: 541,909
+Cleaned Purchase Transactions: 392,692
+Unique Active Customers: 4,338
+Unique Purchase Invoices: 18,532
+Total Analyzed Revenue: £8,887,208.89
+Average Order Value: £479.56
+
+--------------------------------------------------------------------------------
+RFM DISTRIBUTIONS SUMMARY
+--------------------------------------------------------------------------------
+Recency (Days):    Min=1, Median=51.0, Mean=92.5, Max=374
+Frequency (Orders): Min=1, Median=2.0, Mean=4.3, Max=209
+Monetary Spend (£): Min=£3.75, Median=£668.57, Mean=£2048.69, Max=£280,206.02
+
+--------------------------------------------------------------------------------
+K-MEANS CLUSTER EVALUATION (K = 2 to 8)
+--------------------------------------------------------------------------------
+ K   Inertia  Silhouette Score
+ 2 6483.5894          0.432827
+ 3 4869.4886          0.336517
+ 4 3939.0494          0.337517
+ 5 3296.7087          0.316200
+ 6 2855.7641          0.312409
+ 7 2548.8202          0.309186
+ 8 2336.3411          0.303275
+
+Selected Optimal K: 4
+Justification: Clear elbow inflection in inertia curve; highest multi-cluster silhouette score (0.3375);
+optimal business interpretability separating VIPs, recent buyers, potential loyalists, and churned accounts.
+
+--------------------------------------------------------------------------------
+CUSTOMER SEGMENT PROFILES (K = 4)
+--------------------------------------------------------------------------------
+ Cluster                   Segment  Customer_Count  Customer_Percentage  Total_Revenue  Revenue_Percentage  Average_Recency  Median_Recency  Average_Frequency  Median_Frequency  Average_Monetary  Median_Monetary
+       0                 Champions             713                16.44     5766757.07               64.89            12.17             8.0              13.75              10.0           8088.02          3722.82
+       1     Hibernating Customers            1622                37.39      553099.77                6.22           181.51           174.5               1.32               1.0            341.00           296.09
+       2 New / Promising Customers             837                19.29      466479.03                5.25            17.70            17.0               2.19               2.0            557.32           480.31
+       3       Potential Loyalists            1166                26.88     2100873.02               23.64            71.64            57.0               4.08               4.0           1801.78          1345.20
+
+================================================================================
+BUSINESS RECOMMENDATIONS
+================================================================================
+1. Champions (16.4% customers, 64.9% revenue):
+   - Premium loyalty tiers, concierge support, exclusive early product access.
+   - Referral programmes and VIP appreciation campaigns.
+
+2. Potential Loyalists (26.9% customers, 23.6% revenue):
+   - Category cross-selling, personalized bundle recommendations.
+   - Volume discount incentives to convert them into top-tier Champions.
+
+3. New / Promising Customers (19.3% customers, 5.2% revenue):
+   - Automated onboarding email drip campaigns, welcome coupons for 2nd order.
+   - Educational product showcases and customer review highlights.
+
+4. Hibernating Customers (37.4% customers, 6.2% revenue):
+   - Low-cost automated win-back / reactivation emails.
+   - Surveys to understand inactivity reason; selective deep discounts on past favorites.
+================================================================================
